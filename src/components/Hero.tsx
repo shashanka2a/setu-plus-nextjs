@@ -52,23 +52,23 @@ export function Hero() {
               Setu.plus Platform
             </div>
             
-            {/* Main Headline */}
-            <div className="space-y-3">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+            {/* Main Headline - Fixed hierarchy and spacing */}
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 <span 
-                  className="block text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-600 animate-slide-in-left"
+                  className="block text-2xl md:text-3xl lg:text-4xl font-medium text-gray-600 mb-2 animate-slide-in-left"
                   style={{ animationDelay: ANIMATION_DELAYS.headline }}
                 >
                   The
                 </span>
                 <span 
-                  className="block bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent animate-slide-in-right"
+                  className="block text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent animate-slide-in-right mb-2"
                   style={{ animationDelay: ANIMATION_DELAYS.headline }}
                 >
                   Everything App
                 </span>
                 <span 
-                  className="block text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 animate-slide-in-left"
+                  className="block text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-800 animate-slide-in-left"
                   style={{ animationDelay: ANIMATION_DELAYS.headline }}
                 >
                   for Digital Commerce
@@ -92,14 +92,14 @@ export function Hero() {
               "Building bridges that empower every business, every consumer, every community."
             </blockquote>
             
-            {/* CTA Buttons */}
+            {/* CTA Buttons - Fixed alignment and sizing */}
             <div 
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in-up"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-stretch sm:items-center animate-fade-in-up"
               style={{ animationDelay: ANIMATION_DELAYS.buttons }}
             >
               <Button 
                 size="lg" 
-                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-lg px-8 py-4 min-w-[200px] h-14 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-lg px-8 py-4 min-w-[200px] h-14 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 rounded-lg"
                 onClick={handleGetStarted}
                 disabled={isStartLoading}
               >
@@ -116,7 +116,7 @@ export function Hero() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="w-full sm:w-auto text-lg px-8 py-4 min-w-[200px] h-14 font-semibold border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105"
+                className="w-full sm:w-auto text-lg px-8 py-4 min-w-[200px] h-14 font-semibold border-2 border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105 rounded-lg bg-white"
                 onClick={handleDemo}
                 disabled={isDemoLoading}
               >
@@ -135,7 +135,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Visual Section */}
+          {/* Visual Section - Fixed alignment and floating elements */}
           <div 
             className="relative group animate-fade-in-up"
             style={{ animationDelay: ANIMATION_DELAYS.visual }}
@@ -147,31 +147,31 @@ export function Hero() {
                 className="w-full h-auto rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500"
               />
               
-              {/* Status Badges */}
-              <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg transform hover:scale-105 transition-all duration-300">
+              {/* Status Badges - Better positioning */}
+              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg transform hover:scale-105 transition-all duration-300">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-                  <span className="text-sm font-semibold text-blue-700">ONDC Ready</span>
+                  <span className="text-xs font-semibold text-blue-700">ONDC Ready</span>
                 </div>
               </div>
               
-              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg transform hover:scale-105 transition-all duration-300">
+              <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg transform hover:scale-105 transition-all duration-300">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-violet-500 rounded-full animate-pulse" />
-                  <span className="text-sm font-semibold text-violet-700">AI Powered</span>
+                  <span className="text-xs font-semibold text-violet-700">AI Powered</span>
                 </div>
               </div>
               
-              {/* Connection Line */}
+              {/* Connection Line - Better positioned */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-40 h-1 bg-gradient-to-r from-blue-500 via-violet-500 to-indigo-500 rounded-full opacity-80 animate-pulse group-hover:opacity-100 transition-all duration-500" />
+                <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-violet-500 to-indigo-500 rounded-full opacity-80 animate-pulse group-hover:opacity-100 transition-all duration-500" />
               </div>
             </div>
             
-            {/* Floating Elements */}
-            <div className="absolute -top-2 -left-2 w-6 h-6 bg-blue-500 rounded-full animate-bounce opacity-70 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 shadow-lg" />
-            <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-violet-500 rounded-full animate-bounce opacity-70 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 shadow-lg" style={{ animationDelay: '0.5s' }} />
-            <div className="absolute top-1/2 -right-3 w-3 h-3 bg-indigo-500 rounded-full animate-bounce opacity-70 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 shadow-lg" style={{ animationDelay: '1s' }} />
+            {/* Floating Elements - Fixed positioning */}
+            <div className="absolute -top-1 -left-1 w-4 h-4 bg-blue-500 rounded-full animate-bounce opacity-60 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 shadow-md" />
+            <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-violet-500 rounded-full animate-bounce opacity-60 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 shadow-md" style={{ animationDelay: '0.5s' }} />
+            <div className="absolute top-1/2 -right-2 w-2 h-2 bg-indigo-500 rounded-full animate-bounce opacity-60 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500 shadow-md" style={{ animationDelay: '1s' }} />
           </div>
         </div>
       </div>

@@ -57,7 +57,7 @@ export function AIFeatures() {
       <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-violet-400/5 to-indigo-400/5 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             AI Advantage
           </h2>
@@ -68,7 +68,7 @@ export function AIFeatures() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:-translate-y-1 relative overflow-hidden">
+            <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm hover:-translate-y-1 relative overflow-hidden animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
               {/* Subtle gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${getGradientClasses(feature.color)} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
               

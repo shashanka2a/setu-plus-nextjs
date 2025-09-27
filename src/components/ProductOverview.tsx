@@ -148,17 +148,17 @@ export function ProductOverview() {
           {products.map((product, index) => (
             <Card 
               key={product.id}
-              className={`relative overflow-hidden border-2 ${product.border} ${product.hover} transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-pointer animate-fade-in-up`}
+              className={`relative overflow-hidden border-2 ${product.border} ${product.hover} transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-pointer animate-fade-in-up p-6`}
               style={{animationDelay: `${index * 0.1}s`}}
             >
               {/* Background gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-50 group-hover:opacity-70 transition-opacity duration-300`}></div>
               
-              <CardHeader className="relative z-10 text-center pb-3">
-                <div className={`inline-flex p-4 rounded-full mb-4 bg-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <product.icon className={`h-8 w-8 ${product.iconColor}`} />
+              <CardHeader className="relative z-10 text-center pb-4 px-0">
+                <div className={`inline-flex p-5 rounded-full mb-6 bg-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <product.icon className={`h-10 w-10 ${product.iconColor}`} />
                 </div>
-                <CardTitle className="text-xl text-gray-900 mb-2">
+                <CardTitle className="text-xl text-gray-900 mb-3 font-semibold">
                   {product.title}
                 </CardTitle>
                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -166,7 +166,7 @@ export function ProductOverview() {
                 </p>
               </CardHeader>
               
-              <CardContent className="relative z-10 pt-0">
+              <CardContent className="relative z-10 pt-0 px-0">
                 <Button 
                   className={`w-full ${product.buttonColor} group-hover:shadow-lg transition-all duration-300`}
                   onClick={() => router.push(`/${product.id}`)}

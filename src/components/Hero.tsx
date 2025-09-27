@@ -22,11 +22,11 @@ export function Hero() {
   };
 
   return (
-    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-50 via-violet-50 to-indigo-50 relative overflow-hidden">
+    <section className="pt-32 pb-16 bg-gradient-to-br from-blue-50/30 via-violet-50/20 to-indigo-50/30 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-violet-400/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-violet-400/20 to-indigo-400/20 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-blue-400/10 to-violet-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-violet-400/10 to-indigo-400/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -47,18 +47,18 @@ export function Hero() {
               <span className="block animate-slide-in-left text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 opacity-100">for Digital Commerce</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 max-w-2xl lg:mx-0 mx-auto leading-loose animate-fade-in-up opacity-100" style={{animationDelay: '0.2s'}}>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-2xl lg:mx-0 mx-auto leading-loose animate-fade-in-up opacity-100 mt-8" style={{animationDelay: '0.2s'}}>
               Democratizing commerce through AI-powered open networks.
             </p>
             
-            <p className="text-lg md:text-xl text-gray-500 max-w-2xl lg:mx-0 mx-auto italic leading-loose animate-fade-in-up opacity-100" style={{animationDelay: '0.4s'}}>
+            <p className="text-lg md:text-xl text-gray-500 max-w-2xl lg:mx-0 mx-auto italic leading-loose animate-fade-in-up opacity-100 mt-6" style={{animationDelay: '0.4s'}}>
               "Building bridges that empower every business, every consumer, every community."
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in-up opacity-100" style={{animationDelay: '0.6s'}}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center animate-fade-in-up opacity-100 mt-8" style={{animationDelay: '0.6s'}}>
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-lg px-8 py-4 min-w-[180px] transform hover:scale-105 transition-all duration-300 hover:shadow-lg"
+                className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-lg px-10 py-5 w-[200px] h-[56px] transform hover:scale-105 transition-all duration-300 hover:shadow-lg"
                 onClick={handleGetStarted}
                 disabled={isStartLoading}
               >
@@ -75,7 +75,7 @@ export function Hero() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-8 py-4 min-w-[160px] border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                className="text-lg px-10 py-5 w-[200px] h-[56px] border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                 onClick={handleDemo}
                 disabled={isDemoLoading}
               >

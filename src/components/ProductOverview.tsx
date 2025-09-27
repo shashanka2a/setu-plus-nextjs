@@ -135,7 +135,7 @@ export function ProductOverview() {
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50/50 to-blue-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Explore Our Products
           </h2>
@@ -145,10 +145,11 @@ export function ProductOverview() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <Card 
               key={product.id}
-              className={`relative overflow-hidden border-2 ${product.border} ${product.hover} transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-pointer`}
+              className={`relative overflow-hidden border-2 ${product.border} ${product.hover} transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-pointer animate-fade-in-up`}
+              style={{animationDelay: `${index * 0.1}s`}}
             >
               {/* Background gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-50 group-hover:opacity-70 transition-opacity duration-300`}></div>

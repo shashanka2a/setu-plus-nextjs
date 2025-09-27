@@ -1,0 +1,16 @@
+{
+  "name": "Setu.plus - Your All-in-One Platform",
+  "short_name": "Setu.plus",
+  "description": "Discover our comprehensive suite of products powered by AI",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#8B5CF6",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

@@ -46,14 +46,14 @@ export function Header() {
             <div className="ml-10 flex items-baseline space-x-8">
               <Link 
                 href="/"
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-gray-700 hover:text-blue-600 transition-all duration-300 hover:scale-105"
               >
                 Home
               </Link>
               <div className="relative">
                 <button 
                   onClick={() => setIsProductsOpen(!isProductsOpen)}
-                  className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                  className="flex items-center text-gray-700 hover:text-blue-600 transition-all duration-300 hover:scale-105"
                 >
                   Products
                   <ChevronDown className="ml-1 h-4 w-4" />
@@ -65,7 +65,7 @@ export function Header() {
                         <button
                           key={product.id}
                           onClick={() => handleProductClick(product.id)}
-                          className="text-left p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                          className="text-left p-3 rounded-lg hover:bg-gray-50 transition-all duration-300 hover:scale-105 hover:shadow-md"
                         >
                           <div className="font-medium text-gray-900">{product.name}</div>
                           <div className="text-sm text-gray-600">{product.description}</div>
@@ -75,15 +75,15 @@ export function Header() {
                   </div>
                 )}
               </div>
-              <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors">AI Advantage</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+              <a href="#features" className="text-gray-700 hover:text-blue-600 transition-all duration-300 hover:scale-105">AI Advantage</a>
+              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-all duration-300 hover:scale-105">Contact</a>
             </div>
           </nav>
 
           <div className="hidden md:block">
             <div className="ml-4 flex items-center space-x-4">
-              <Button variant="ghost">Sign In</Button>
-              <Button className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700">
+              <Button variant="ghost" className="hover:scale-105 transition-all duration-300">Sign In</Button>
+              <Button className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 transform hover:scale-105 transition-all duration-300 hover:shadow-lg">
                 Get Started
               </Button>
             </div>

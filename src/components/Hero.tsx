@@ -32,26 +32,26 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
           {/* Content */}
-          <div className="text-center lg:text-left animate-fade-in-up space-y-8">
+          <div className="text-center lg:text-left animate-fade-in-up space-y-10">
             {/* Brand Badge */}
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-blue-200/50 rounded-full px-4 py-2 text-sm font-medium text-blue-700 animate-slide-in-left">
               <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
               Setu.plus Platform
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
-              <span className="block animate-slide-in-left text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-600 mb-2">The</span>
-              <span className="block bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent animate-slide-in-right mb-2">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight space-y-2">
+              <span className="block animate-slide-in-left text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-600">The</span>
+              <span className="block bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent animate-slide-in-right">
                 Everything App
               </span>
               <span className="block animate-slide-in-left text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800">for Digital Commerce</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 max-w-2xl lg:mx-0 mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-2xl lg:mx-0 mx-auto leading-loose animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               Democratizing commerce through AI-powered open networks.
             </p>
             
-            <p className="text-lg md:text-xl text-gray-500 max-w-2xl lg:mx-0 mx-auto italic animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+            <p className="text-lg md:text-xl text-gray-500 max-w-2xl lg:mx-0 mx-auto italic leading-loose animate-fade-in-up" style={{animationDelay: '0.4s'}}>
               "Building bridges that empower every business, every consumer, every community."
             </p>
             

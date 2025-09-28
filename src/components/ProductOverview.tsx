@@ -148,7 +148,7 @@ export function ProductOverview() {
           {products.map((product, index) => (
             <Card 
               key={product.id}
-              className={`relative overflow-hidden border-2 ${product.border} ${product.hover} transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-pointer animate-fade-in-up p-5`}
+              className={`relative overflow-hidden border-2 ${product.border} ${product.hover} transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-pointer animate-fade-in-up p-6 rounded-2xl`}
               style={{animationDelay: `${index * 0.1}s`}}
             >
               {/* Background gradient */}
@@ -166,9 +166,20 @@ export function ProductOverview() {
                     </CardTitle>
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {product.tagline}
-                </p>
+                
+                {/* Done-line Description */}
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-200/50 shadow-sm">
+                  <div className="flex items-start gap-3">
+                    <div className={`flex-shrink-0 w-5 h-5 ${product.iconColor.replace('text-', 'bg-').replace('-600', '-500')} rounded-full flex items-center justify-center`}>
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm text-gray-700 font-medium leading-relaxed">
+                        {product.tagline}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </CardHeader>
               
               <CardContent className="relative z-10 pt-3 px-0">

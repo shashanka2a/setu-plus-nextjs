@@ -170,9 +170,12 @@ export function ProductOverview() {
                 {/* Done-line Description */}
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-200/50 shadow-sm">
                   <div className="flex items-start gap-3">
-                    <div className={`flex-shrink-0 w-5 h-5 ${product.iconColor.replace('text-', 'bg-').replace('-600', '-500')} rounded-full flex items-center justify-center`}>
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
+                    {/* Show dot only for specific products */}
+                    {!['kiranape', 'shoppe', 'eventpe', 'learnpe'].includes(product.id) && (
+                      <div className={`flex-shrink-0 w-5 h-5 ${product.iconColor.replace('text-', 'bg-').replace('-600', '-500')} rounded-full flex items-center justify-center`}>
+                        <div className="w-2 h-2 bg-white rounded-full"></div>
+                      </div>
+                    )}
                     <div className="flex-1">
                       <p className="text-sm text-gray-700 font-medium leading-relaxed">
                         {product.tagline}

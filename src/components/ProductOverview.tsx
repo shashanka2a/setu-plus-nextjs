@@ -148,27 +148,32 @@ export function ProductOverview() {
           {products.map((product, index) => (
             <Card 
               key={product.id}
-              className={`relative overflow-hidden border-2 ${product.border} ${product.hover} transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-pointer animate-fade-in-up p-6`}
+              className={`relative overflow-hidden border-2 ${product.border} ${product.hover} transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group cursor-pointer animate-fade-in-up p-5`}
               style={{animationDelay: `${index * 0.1}s`}}
             >
               {/* Background gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${product.gradient} opacity-50 group-hover:opacity-70 transition-opacity duration-300`}></div>
               
-              <CardHeader className="relative z-10 text-center pb-4 px-0">
-                <div className={`inline-flex p-5 rounded-full mb-6 bg-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <product.icon className={`h-10 w-10 ${product.iconColor}`} />
+              <CardHeader className="relative z-10 pb-4 px-0">
+                {/* Icon and Title side by side */}
+                <div className="flex items-center gap-4 mb-4">
+                  <div className={`flex-shrink-0 p-3 rounded-xl bg-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <product.icon className={`h-8 w-8 ${product.iconColor}`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <CardTitle className="text-lg text-gray-900 font-semibold truncate">
+                      {product.title}
+                    </CardTitle>
+                  </div>
                 </div>
-                <CardTitle className="text-xl text-gray-900 mb-3 font-semibold">
-                  {product.title}
-                </CardTitle>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {product.tagline}
                 </p>
               </CardHeader>
               
-              <CardContent className="relative z-10 pt-0 px-0">
+              <CardContent className="relative z-10 pt-3 px-0">
                 <Button 
-                  className={`w-full ${product.buttonColor} group-hover:shadow-lg transition-all duration-300`}
+                  className={`w-full ${product.buttonColor} group-hover:shadow-lg transition-all duration-300 text-sm py-2.5`}
                   onClick={() => router.push(`/${product.id}`)}
                 >
                   Go to {product.title}
